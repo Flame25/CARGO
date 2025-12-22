@@ -1,0 +1,7 @@
+<class_libraries>
+    <library path="differential_flatness_controller">
+        <class type="differential_flatness_controller::Plugin" base_class_type="cargo_motion_controller_plugin_base::ControllerBase">
+            <description>Controller plugin for differential flatness.</description>
+        </class>
+    </library>
+</class_libraries>
