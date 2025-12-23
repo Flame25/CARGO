@@ -40,7 +40,7 @@ set(SOURCE_CPP_FILES
   src/basic_motion_references.cpp
   src/hover_motion.cpp
   #src/trajectory_motion.cpp
-  #src/position_motion.cpp
+  src/position_motion.cpp
   #src/speed_motion.cpp
   #src/speed_in_a_plane_motion.cpp
   #src/acro_motion.cpp

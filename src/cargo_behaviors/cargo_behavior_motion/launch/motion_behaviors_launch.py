@@ -104,6 +104,7 @@ def generate_launch_description():
     behaviors = [
         'takeoff',
         'land',
+        'goto'
     ]
 
     launch_description = []

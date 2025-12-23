@@ -4,4 +4,9 @@
             <description>Controller plugin for differential flatness.</description>
         </class>
     </library>
+    <library path="pid_speed_controller">
+        <class type="pid_speed_controller::Plugin" base_class_type="cargo_motion_controller_plugin_base::ControllerBase">
+            <description>Controller plugin for pid controller.</description>
+        </class>
+    </library>
 </class_libraries>

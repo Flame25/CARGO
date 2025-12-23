@@ -95,6 +95,7 @@ ament_export_libraries(${PROJECT_NAME})
 # Add Plugins
 set(PLUGIN_LIST
   differential_flatness_controller
+  pid_speed_controller
 )
 
 foreach(PLUGIN ${PLUGIN_LIST})

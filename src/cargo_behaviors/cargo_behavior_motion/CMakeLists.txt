@@ -37,6 +37,7 @@ endforeach()
 set(PLUGINS_CPP_FILES
   land_behavior/plugins/land_plugin_platform.cpp
   takeoff_behavior/plugins/takeoff_plugin_platform.cpp
+  goto_behavior/plugins/goto_plugin_position.cpp
 )
 
 # Library
@@ -66,6 +67,7 @@ ament_export_targets(
 set(SUBPACKAGES
   land_behavior
   takeoff_behavior
+  goto_behavior
 )
 
 foreach(EXECUTABLE ${SUBPACKAGES})
@@ -112,6 +114,13 @@ add_library(land_component SHARED
 )
 ament_target_dependencies(land_component ${PROJECT_DEPENDENCIES})
 rclcpp_components_register_nodes(land_component "LandBehavior")
+
+
+add_library(goto_component SHARED
+  goto_behavior/src/goto_behavior.cpp
+)
+ament_target_dependencies(goto_component ${PROJECT_DEPENDENCIES})
+rclcpp_components_register_nodes(goto_component "GoToBehavior")
 
 install(TARGETS
   takeoff_component

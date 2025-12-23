@@ -3,6 +3,9 @@
     <description>Takeoff done with platform.</description>
     </class>
   <class type="land_plugin_platform::Plugin" base_class_type="land_base::LandBase">
-    <description>Land done with platform.</description>
+        <description>Land done with platform.</description>
+  </class>
+  <class type="go_to_plugin_position::Plugin" base_class_type="go_to_base::GoToBase">
+        <description>Go to done with position commmands.</description>
   </class>
 </library>
