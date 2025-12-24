@@ -2,7 +2,7 @@
 from cargo_python_api.drone_interface_base import DroneInterfaceBase
 from cargo_python_api.modules.land_module import LandModule
 from cargo_python_api.modules.takeoff_module import TakeoffModule
-from cargo_python_api.modules.goto_module import GoToModule
+from cargo_python_api.modules.go_to_module import GoToModule
 
 
 class DroneInterface(DroneInterfaceBase):

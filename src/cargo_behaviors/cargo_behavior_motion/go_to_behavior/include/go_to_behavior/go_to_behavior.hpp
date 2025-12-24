@@ -13,7 +13,7 @@
 #include "cargo_core/utils/tf_utils.hpp"
 #include "cargo_msgs/action/go_to_waypoint.hpp"
 #include "cargo_msgs/msg/platform_info.hpp"
-#include "goto_base.hpp"
+#include "go_to_base.hpp"
 
 class GoToBehavior
     : public cargo_behavior::BehaviorServer<cargo_msgs::action::GoToWaypoint> {

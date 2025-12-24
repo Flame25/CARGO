@@ -5,7 +5,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from cargo_msgs.msg import YawMode
-from cargo_python_api.behavior_actions.goto_behavior import GoToBehavior
+from cargo_python_api.behavior_actions.go_to_behavior import GoToBehavior
 from cargo_python_api.modules.module_base import ModuleBase
 from geometry_msgs.msg import Pose
 

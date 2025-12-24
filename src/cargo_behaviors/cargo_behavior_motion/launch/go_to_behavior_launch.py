@@ -36,12 +36,12 @@ def generate_launch_description() -> LaunchDescription:
         DeclareLaunchArgument('plugin_name',
                               description='Plugin name',
                               choices=get_available_plugins(
-                                  'cargo_behaviors_motion', BEHAVIOR_NAME)),
+                                  'cargo_behavior_motion', BEHAVIOR_NAME)),
         DeclareLaunchArgumentsFromConfigFile(
             name='behavior_config_file', source_file=behavior_config_file,
             description='Path to behavior configuration file'),
         Node(
-            package='cargo_behaviors_motion',
+            package='cargo_behavior_motion',
             executable=BEHAVIOR_NAME + '_behavior_node',
             namespace=LaunchConfiguration('namespace'),
             output='screen',

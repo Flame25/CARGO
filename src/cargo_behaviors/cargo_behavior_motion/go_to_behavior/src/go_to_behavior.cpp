@@ -1,4 +1,4 @@
-#include "goto_behavior/goto_behavior.hpp"
+#include "go_to_behavior/go_to_behavior.hpp"
 
 GoToBehavior::GoToBehavior(const rclcpp::NodeOptions &options)
     : cargo_behavior::BehaviorServer<cargo_msgs::action::GoToWaypoint>(
@@ -32,7 +32,7 @@ GoToBehavior::GoToBehavior(const rclcpp::NodeOptions &options)
     }
 
     loader_ = std::make_shared<pluginlib::ClassLoader<go_to_base::GoToBase>>(
-        "cargo_behaviors_motion", "go_to_base::GoToBase");
+        "cargo_behavior_motion", "go_to_base::GoToBase");
 
     tf_handler_ = std::make_shared<cargo::tf::TfHandler>(this);
 

@@ -1,5 +1,5 @@
 #include "cargo_core/core_functions.hpp"
-#include "goto_behavior/goto_behavior.hpp"
+#include "go_to_behavior/go_to_behavior.hpp"
 
 int main(int argc, char *argv[]) {
     setvbuf(stdout, NULL, _IONBF, BUFSIZ);

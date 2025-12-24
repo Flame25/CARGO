@@ -1,6 +1,6 @@
 
 #include "cargo_motion_reference_handlers/position_motion.hpp"
-#include "goto_behavior/goto_base.hpp"
+#include "go_to_behavior/go_to_base.hpp"
 
 namespace go_to_plugin_position {
 class Plugin : public go_to_base::GoToBase {
