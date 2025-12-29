@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.8)
 project(cargo_behavior_tree)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
@@ -33,9 +35,15 @@ include_directories(
 set(PLUGINS_CPP_FILES
   plugins/action/takeoff_action.cpp
   plugins/action/arm_service.cpp
+  plugins/action/go_to_action.cpp
+  plugins/action/go_to_gps_action.cpp
+  plugins/action/offboard_service.cpp
+  plugins/action/land_action.cpp
   plugins/condition/is_flying_condition.cpp
   plugins/decorator/wait_for_event.cpp
   plugins/decorator/wait_for_alert.cpp
+  plugins/decorator/wait_for_time.cpp
+
 )
 
 # Create the node executable

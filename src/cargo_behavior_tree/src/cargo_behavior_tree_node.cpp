@@ -6,11 +6,17 @@
 #include <chrono>
 #include <thread>
 
+#include "action/land_action.hpp"
 #include "cargo_behavior_tree/action/arm_service.hpp"
+#include "cargo_behavior_tree/action/go_to_action.hpp"
+#include "cargo_behavior_tree/action/go_to_gps_action.hpp"
+#include "cargo_behavior_tree/action/offboard_service.hpp"
 #include "cargo_behavior_tree/action/takeoff_action.hpp"
 #include "cargo_behavior_tree/condition/is_flying_condition.hpp"
 #include "cargo_behavior_tree/decorator/wait_for_alert.hpp"
 #include "cargo_behavior_tree/decorator/wait_for_event.hpp"
+
+#include "cargo_behavior_tree/decorator/wait_for_time.hpp"
 #include "rclcpp/rclcpp.hpp"
 
 int main(int argc, char *argv[]) {
@@ -39,9 +45,17 @@ int main(int argc, char *argv[]) {
     factory.registerNodeType<cargo_behavior_tree::ArmService>("Arm");
     factory.registerNodeType<cargo_behavior_tree::DisarmService>("Disarm");
     factory.registerNodeType<cargo_behavior_tree::TakeoffAction>("TakeOff");
+
+    factory.registerNodeType<cargo_behavior_tree::LandAction>("Land");
+
+    factory.registerNodeType<cargo_behavior_tree::GoToAction>("GoTo");
+    factory.registerNodeType<cargo_behavior_tree::GoToGpsAction>("GoToGps");
+    factory.registerNodeType<cargo_behavior_tree::OffboardService>("Offboard");
     factory.registerNodeType<cargo_behavior_tree::IsFlyingCondition>(
         "IsFlying");
     factory.registerNodeType<cargo_behavior_tree::WaitForEvent>("WaitForEvent");
+
+    factory.registerNodeType<cargo_behavior_tree::WaitForTime>("WaitForTime");
     factory.registerNodeType<cargo_behavior_tree::WaitForAlert>("WaitForAlert");
 
     BT::NodeConfiguration *config = new BT::NodeConfiguration();
